@@ -1,6 +1,13 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --main-font:  'Lato', sans-serif;
+  --main-background-color: linear-gradient(62deg, #3a3d40 5%, #181719 100%);
+  --second-color-red: #BE3144;
+  --main-textcolor:whitesmoke;
+  --portofolio-background: #45567D;
+}
 body {
   margin: 0;
 }
@@ -16,7 +23,7 @@ nav {
   z-index: 99;
 }
 nav .container {
-  background-color: #BE3144;
+  background-color: var(--second-color-red);
   height: 70px;
   width: 100%;
   position: absolute;
@@ -37,15 +44,17 @@ nav .container li{
   padding-right: 30px;
   display: grid;
   place-items: center;
+  transition-duration: 0.3s;
+  transition-delay: 50ms;
 }
 nav li:hover {
   background-color: #45567D;
 }
 nav a {
   font-size: 25px;
-  color: whitesmoke;
+  color: var(--main-textcolor);
   text-decoration: none;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--main-font);
 }
 
 header {
@@ -61,16 +70,16 @@ header .container {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  font-family: 'Lato', sans-serif;
-  background: linear-gradient(62deg, #3a3d40 5%, #181719 100%);
+  font-family: var(--main-font);
+  background: var(--main-background-color);
 }
 header h1 {
-  color: whitesmoke;
+  color: var(--main-textcolor);
   font-size: 60px;
   font-weight: bold;
 }
 header p {
-  color: #B83143;
+  color: var(--second-color-red);
   font-style: italic;
   font-size: 30px;
   margin-top: -30px;
@@ -82,7 +91,7 @@ main {
   padding: 0;
 }
 main section {
-  background-color: #45567D;
+  background-color: var(--portofolio-background);
   padding: 20px;
   margin: 0;
 
@@ -112,8 +121,8 @@ main .grid-parent div {
 }
 main h2 {
   font-size: 40px;
-  color: whitesmoke;
-  font-family: 'Lato', sans-serif;
+  color: var(--main-textcolor);
+  font-family: var(--main-font);
   font-weight: bolder;
   word-spacing: 5px;
   text-align: center;
@@ -130,7 +139,7 @@ main h2 {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: whitesmoke;
+  background-color: var(--main-textcolor);
   bottom: -5px;
 }
 main .grid-parent img {
@@ -154,9 +163,9 @@ main .grid-parent .div1-child {
   left: 0;
   margin: 0;
   text-align: center;
-  color: whitesmoke;
+  color: var(--main-textcolor);
   font-size: 22px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--main-font);
   padding: 10px; 
   box-sizing: border-box;
 } 
@@ -188,9 +197,9 @@ main .grid-parent .div2-child {
   left: 0;
   margin: 0;
   text-align: center;
-  color: whitesmoke;
+  color: var(--main-textcolor);
   font-size: 22px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--main-font);
   padding: 10px; 
   box-sizing: border-box;
 } 
@@ -215,9 +224,9 @@ main .grid-parent .div3-child {
   left: 0;
   margin: 0;
   text-align: center;
-  color: whitesmoke;
+  color: var(--main-textcolor);
   font-size: 22px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--main-font);
   padding: 10px; 
   box-sizing: border-box;
 } 
@@ -245,9 +254,9 @@ main .grid-parent .div4-child {
   left: 0;
   margin: 0;
   text-align: center;
-  color: whitesmoke;
+  color: var(--main-textcolor);
   font-size: 22px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--main-font);
   padding: 10px; 
   box-sizing: border-box;
 } 
@@ -274,9 +283,9 @@ main .grid-parent .div5-child {
   left: 0;
   margin: 0;
   text-align: center;
-  color: whitesmoke;
+  color: var(--main-textcolor);
   font-size: 22px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--main-font);
   padding: 10px; 
   box-sizing: border-box;
 } 
@@ -303,9 +312,9 @@ main .grid-parent .div6-child {
   left: 0;
   margin: 0;
   text-align: center;
-  color: whitesmoke;
+  color: var(--main-textcolor);
   font-size: 22px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--main-font);
   padding: 10px; 
   box-sizing: border-box;
 } 
@@ -322,8 +331,8 @@ main .grid-parent .div6-child {
    width: 175px;
    height: 45px;
    margin: 40px auto;
-   color: whitesmoke;
-   font-family: 'Lato', sans-serif;
+   color: var(--main-textcolor);
+   font-family: var(--main-font);
    font-weight: bold;
    font-size: 20px;
    text-decoration: none;
@@ -359,9 +368,9 @@ main .a-container a:hover {
   align-items: center;
   padding-top: 90px;
   padding-bottom: 90px;
-  color: whitesmoke;
-  background-color: #303841;
-  font-family: 'Lato', sans-serif;
+  color: var(--main-textcolor);
+  background: var(--main-background-color);
+  font-family: var(--main-font);
 }
 .contact .container h2 {
   font-size: 55px;
@@ -387,7 +396,7 @@ main .a-container a:hover {
 
 .contact .container a {
   text-decoration: none;
-  color: whitesmoke;
+  color: var(--main-textcolor);
   font-size: 25px;
   
 }
@@ -400,17 +409,17 @@ main .a-container a:hover {
 footer .container {
   display: flex;
   justify-content: center;
-  font-family: 'Lato', sans-serif;
-  background-color: #303841;
-  border-top: #BE3144 solid 4px;
+  font-family: var(--main-font);
+  background: var(--main-background-color);
+  border-top: var(--second-color-red) solid 4px;
   padding: 30px;
-  color: whitesmoke;
+  color: var(--main-textcolor);
   font-size: 18px;
   word-spacing: 2px;
   letter-spacing: 2px;
   width: 100vw;
 }
 footer .container span {
-  color: gray;
+  color: var(--second-color-red);
   font-weight: bold;
 }
